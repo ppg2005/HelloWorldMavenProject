@@ -14,7 +14,10 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <failOnMissingWebXml>false</failOnMissingWebXml>  <!-- Avoids errors with missing web.xml -->
+	<failOnMissingWebXml>false</failOnMissingWebXml>  <!-- Avoids errors with missing web.xml -->
+        <sonar.projectKey>ppg2005_HelloWorldMavenProject</sonar.projectKey>
+        <sonar.organization>Partha-Org</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
