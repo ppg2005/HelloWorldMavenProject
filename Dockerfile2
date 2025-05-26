@@ -1,0 +1,18 @@
+# Stage 1: Build the application
+FROM openjdk:17-jdk-slim AS builder
+
+WORKDIR /app
+
+COPY src/main/java/HelloWorld.java /app/
+
+RUN javac HelloWorld.java
+
+# Stage 2: Use a lightweight runtime image
+FROM eclipse-temurin:17-jre-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/HelloWorld.class /app/
+
+CMD ["java", "HelloWorld"]
+ 
